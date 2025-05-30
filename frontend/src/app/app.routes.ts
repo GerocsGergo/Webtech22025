@@ -11,6 +11,11 @@ import { AdminDeleteComponent } from './components/admin-delete/admin-delete.com
 import { AdminStaffListComponent } from './components/admin-staff-list/admin-staff-list.component';
 import { AdminStaffCreateComponent } from './components/admin-staff-create/admin-staff-create.component';
 import { AdminStaffModifyComponent } from './components/admin-staff-modify/admin-staff-modify.component';
+import { GameListComponent } from './components/game-list/game-list.component';
+import { GameSearchComponent } from './components/game-search/game-search.component';
+import { GameCreateComponent } from './components/game-create/game-create.component';
+import { GameModifyComponent } from './components/game-modify/game-modify.component';
+import { GameDeleteComponent } from './components/game-delete/game-delete.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -23,6 +28,16 @@ export const routes: Routes = [
     { path: 'staff-login', component: StaffLoginComponent},
 
     { path: 'staff-main-menu', component: StaffMainMenuComponent},
+
+    { path: 'game-list' , component: GameListComponent},
+
+    { path: 'game-search' , component: GameSearchComponent},
+
+    { path: 'game-create' , component: GameCreateComponent},
+
+    { path: 'game-modify' , component: GameModifyComponent},
+
+    { path: 'game-delete' , component: GameDeleteComponent},
 
 
     //Admin menu

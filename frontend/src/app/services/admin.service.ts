@@ -17,7 +17,7 @@ export class AdminService {
   }
 
   getStaffById(id: number) {
-    return this.http.get<StaffResponseDTO>(`/api/getStaff/${id}`);
+    return this.http.get<StaffResponseDTO>(`/api/getStaff/` + id);
   }
   
 

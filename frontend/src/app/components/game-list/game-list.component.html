@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Játékok listája</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Sorszám</th>
+          <th>Cím</th>
+          <th>Hozzáadás dátuma</th>
+          <th>Kategória</th>
+          <th>Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of games">
+          <td>{{ game.sorszam }}</td>
+          <td>{{ game.cim }}</td>
+          <td>{{ game.beszerzes_datuma | date:'yyyy-MM-dd' }}</td>
+          <td>{{ game.kategoria }}</td>
+          <td>{{ game.platform }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button (click)="goBack()">Vissza</button>
+  </div>
+  

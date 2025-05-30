@@ -4,6 +4,7 @@ import { Router } from 'express';
 import { AppDataSource } from './data-source';
 import { StaffController } from './controllers/staff.controller';
 import { AdminController } from './controllers/admin.controller';
+import { GameController } from './controllers/game.controller';
 
 const router = Router();
 
@@ -11,7 +12,16 @@ const router = Router();
 const versionController = new VersionController();
 router.get('/version', versionController.getVersion);
 
-//User
+//game
+const gameController = new GameController();
+router.get('/getAllGames', gameController.getAllGame);
+router.post('/createGame', gameController.createGame);
+router.get('/getGame', gameController.getGame);
+router.put('/modifyGame/:id', gameController.modifyGame);
+router.delete('/deleteGame/:id', gameController.deleteGame);
+
+
+//admin-staff
 const staffController = new StaffController();
 router.post('/loginStaff', staffController.loginStaff);
 router.get('/listAllStaff', staffController.listAllStaff);
@@ -21,7 +31,7 @@ router.put('/modifyStaff/:id', staffController.modifyStaff);
 router.put('/deleteStaff/:id', staffController.deleteStaff);
 router.put('/activateStaff/:id', staffController.activateStaff);
 
-//User
+//admin
 const adminController = new AdminController();
 router.post('/loginAdmin', adminController.loginAdmin);
 router.get('/getCurrentAdmin', adminController.getCurrentAdmin);

@@ -23,13 +23,6 @@ export class Game implements GameDTO{
 
     @Column({
         type: 'enum',
-        enum: ['szabad', 'kikölcsönzött', 'selejtezett'],
-        default: 'szabad'
-    })
-    statusz: 'szabad' | 'kikölcsönzött' | 'selejtezett';
-
-    @Column({
-        type: 'enum',
         enum: Platform
       })
       platform: Platform;

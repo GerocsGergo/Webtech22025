@@ -1,1 +1,21 @@
-<p>staff-main-menu works!</p>
+<div class="page">
+    <div class="title-container">
+      <h1 class="title">GameHouse Staff Menu</h1>
+    </div>
+
+    <div class="main-menu-island">
+      <div class="menu-column">
+        <h3>Játékok</h3>
+        <button class="menu-button" (click)="gameList()">Listázás</button>
+        <button class="menu-button" (click)="gameSearch()">Keresés</button>
+        <button class="menu-button" (click)="gameCreate()">Létrehozás</button>
+        <button class="menu-button" (click)="gameModify()">Módosítás</button>
+        <button class="menu-button" (click)="gameDelete()">Törlés</button>
+      </div>
+
+    </div>
+
+    <button class="menu-button" (click)="goBack()" >Vissza</button>
+
+  </div>
+  

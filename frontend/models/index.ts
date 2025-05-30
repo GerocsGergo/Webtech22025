@@ -8,7 +8,6 @@ export interface GameDTO {
   cim: string;
   beszerzes_datuma: Date;
   kategoria: string;
-  statusz: string;
   platform: string;
 }
 
