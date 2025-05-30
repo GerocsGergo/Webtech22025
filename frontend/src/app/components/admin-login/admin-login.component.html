@@ -1,0 +1,25 @@
+<h2>Admin Login</h2>
+
+<form (ngSubmit)="loginAdmin()">
+
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username" required />
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required />
+  </div>
+
+  <div>
+    <label for="code">Code:</label>
+    <input id="code" type="text" [(ngModel)]="code" name="code" required />
+  </div>
+
+  <div>
+    <button type="button" (click)="goBack()">Back</button>
+    <button type="submit">Login</button>
+  </div>
+
+</form>

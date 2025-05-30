@@ -1,0 +1,27 @@
+<div class="page">
+    <div class="title-container">
+      <h1 class="title">GameHouse Admin Menu</h1>
+    </div>
+
+    <div class="main-menu-island">
+      <div class="menu-column">
+        <h3>Ügyintézők</h3>
+        <button class="menu-button" (click)="adminStaffList()">Listázás</button>
+        <button class="menu-button" (click)="adminStaffCreate()">Létrehozás</button>
+        <button class="menu-button" (click)="adminStaffModify()">Módosítás</button>
+        <button class="menu-button" (click)="adminStaffDelete()">Törlés</button>
+      </div>
+
+
+      <div class="menu-column" *ngIf="isSuperAdmin">
+        <h3>Adminisztrátorok</h3>
+        <button class="menu-button" (click)="createAdmin()">Létrehozás</button>
+        <button class="menu-button" (click)="modifyAdmin()">Módosítás</button>
+        <button class="menu-button" (click)="deleteAdmin()">Törlés</button> 
+      </div>
+    </div>
+
+    <button class="menu-button" (click)="goBack()" >Vissza</button>
+
+  </div>
+  

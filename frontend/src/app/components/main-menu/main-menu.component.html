@@ -1,0 +1,37 @@
+<div class="page">
+    <div class="title-container">
+      <h1 class="title">VideoWarehouse</h1>
+    </div>
+
+    <div class="main-menu-island">
+      <div class="menu-column">
+        <h3>Ügyfelek</h3>
+        <button class="menu-button" >Összes ügyfél lekérdezése</button>
+        <button class="menu-button" >Ügyfél keresése</button>
+        <!-- <button class="menu-button" (click)="openModifyCustomer()">Ügyfél módosítása</button> -->
+      <!--   <button class="menu-button" (click)="openDeleteCustomer()">Ügyfél törlése</button> -->
+        <button class="menu-button" >Ügyfél regisztrálása</button>
+      </div>
+  
+      <div class="menu-column">
+        <h3>Kazetták, DVD-k</h3>
+        <button class="menu-button" >Kazetták, DVD-k lekérdezése</button>
+        <button class="menu-button" >Kazetták, DVD-k hozzáadása</button>
+      </div>
+  
+
+      <div class="menu-column">
+        <h3>Kölcsönzés</h3>
+        <button class="menu-button" >Kölcsönzés rögzítése</button>
+        <button class="menu-button" >Kölcsönzés felszabadítása</button>
+        <button class="menu-button" >Keresés eltelt napok száma alapján</button> 
+      </div>
+    </div>
+
+    <div class="version-container-container">
+      <div class="version-container">  
+      <div class="version-counter" id="versionInfo" name="versionInfo">{{ versionInfo.version || 'N/A' }}</div>
+      <a class="version-counter" href="https://github.com/GerocsGergo/Infrend2025/blob/main/frontend/CHANGELOG.md">change log</a>
+    </div>
+  </div>
+  

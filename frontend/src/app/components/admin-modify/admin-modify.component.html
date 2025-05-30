@@ -1,0 +1,16 @@
+<div>
+    <h2>Admin módosítása</h2>
+  
+    <label for="id">Admin ID:</label>
+    <input type="number" id="id" [(ngModel)]="id" />
+  
+    <label for="password">Új jelszó:</label>
+    <input type="password" id="password" [(ngModel)]="newPassword" />
+  
+    <label for="code">Új kód:</label>
+    <input type="text" id="code" [(ngModel)]="newCode" />
+  
+    <button (click)="modifyAdmin()">Módosítás</button>
+    <button (click)="goBack()">Vissza</button>
+  </div>
+  

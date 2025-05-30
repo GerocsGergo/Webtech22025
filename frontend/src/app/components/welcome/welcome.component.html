@@ -1,0 +1,17 @@
+<div class="page">
+  <div class="welcome-container">
+      <div class="welcome-island">
+        <h1>Üdözlöm a GamingHouse-ban!</h1>
+        <button class="login-button" (click)="loginStaff()">Ügyintézői Belépés</button>
+        <button class="login-button" (click)="loginAdmin()">Adminisztrátori Belépés</button>
+      </div>
+    </div>
+    <div class="version-container-container">
+      <div class="version-container">  
+      <div class="version-counter" id="versionInfo" name="versionInfo">{{ versionInfo.version || 'N/A' }}</div>
+      <a class="version-counter" href="https://github.com/GerocsGergo/Webtech22025/blob/main/frontend/CHANGELOG.md">change log</a>
+    </div>
+  </div>
+    
+
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Új dolgozó létrehozása</h2>
+  
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+    <div *ngIf="message" class="alert alert-success">{{ message }}</div>
+  
+    <form (ngSubmit)="createStaff()" #staffForm="ngForm">
+  
+      <div class="form-group">
+        <label for="username">Felhasználónév:</label>
+        <input id="username" type="text" [(ngModel)]="username" name="username" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Jelszó:</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" class="form-control" required>
+      </div>
+  
+      <div class="form-group form-check">
+        <input id="isActive" type="checkbox" [(ngModel)]="isActive" name="isActive" class="form-check-input">
+        <label for="isActive" class="form-check-label">Aktív</label>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Létrehozás</button>
+    </form>
+    <button type="button" (click)="goBack()">Vissza</button>
+  </div>
+  

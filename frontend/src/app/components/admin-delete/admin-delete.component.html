@@ -1,0 +1,12 @@
+<h2>Admin Törlés / Aktiválás</h2>
+
+<form (ngSubmit)="deleteAdmin()">
+  <label>Admin ID:</label>
+  <input type="number" [(ngModel)]="adminId" name="adminId" required />
+
+  <div class="button-group">
+    <button type="button" (click)="deleteAdmin()">Törlés</button>
+    <button type="button" (click)="activateAdmin()">Aktiválás</button>
+    <button type="button" (click)="goBack()">Vissza</button>
+  </div>
+</form>

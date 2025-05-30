@@ -1,0 +1,15 @@
+<h2>Új Admin létrehozása</h2>
+
+<form (ngSubmit)="createAdmin()">
+  <label>Felhasználónév:</label>
+  <input type="text" [(ngModel)]="username" name="username" required />
+
+  <label>Jelszó:</label>
+  <input type="password" [(ngModel)]="password" name="password" required />
+
+  <label>Kód:</label>
+  <input type="text" [(ngModel)]="code" name="code" required />
+
+  <button type="submit">Létrehozás</button>
+  <button type="button" (click)="goBack()">Mégse</button>
+</form>

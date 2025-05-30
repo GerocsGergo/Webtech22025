@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Dolgozók listája</h2>
+  
+    <div *ngIf="error" class="error">{{ error }}</div>
+  
+    <table *ngIf="staffList.length > 0; else noStaff" class="staff-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Felhasználónév</th>
+          <th>Aktív</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of staffList">
+          <td>{{ staff.id }}</td>
+          <td>{{ staff.username }}</td>
+          <td>{{ staff.isActive ? 'Igen' : 'Nem' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noStaff>
+      <p>Nincs még dolgozó rögzítve.</p>
+    </ng-template>
+  
+    <button (click)="goBack()">Vissza</button>
+  </div>
+  
