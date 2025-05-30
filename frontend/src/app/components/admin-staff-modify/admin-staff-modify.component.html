@@ -1,1 +1,68 @@
-<p>admin-staff-modify works!</p>
+<div class="page">
+    <h1>Dolgozó adatlap</h1>
+  
+    <div *ngIf="!staff">
+      <label>Dolgozó azonosító:</label>
+      <input type="number" [(ngModel)]="id" />
+      <button (click)="loadStaff()">Keresés</button>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </div>
+  
+    <div *ngIf="staff">
+      <table>
+        <thead>
+          <tr>
+            <th>Adattípus</th>
+            <th>Érték</th>
+            <th>Művelet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ID</td>
+            <td>{{ staff.id }}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Felhasználónév</td>
+            <td>{{ staff.username }}</td>
+            <td><button (click)="openUpdatePopup('username')">Módosítás</button></td>
+          </tr>
+          <tr>
+            <td>Jelszó</td>
+            <td>********</td>
+            <td><button (click)="openUpdatePopup('password')">Módosítás</button></td>
+          </tr>
+          <tr>
+            <td>Állapot</td>
+            <td>{{ staff.isActive ? 'Aktív' : 'Inaktív' }}</td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+      </table>
+  
+      <button (click)="goBack()">Vissza</button>
+      <button (click)="inactivateStaff()">Inaktiválás</button>
+      <button (click)="activateStaff()">Aktiválás</button>
+  
+      <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    </div>
+  
+    <div *ngIf="showUpdatePopup" class="popup-overlay">
+      <div class="popup">
+        <h3>{{ getFormattedField(fieldToUpdate) }} módosítása</h3>
+  
+        <div *ngIf="fieldToUpdate !== 'isActive'">
+          <input type="text" [(ngModel)]="newValue" />
+        </div>
+
+  
+        <button (click)="updateStaff()">Mentés</button>
+        <button (click)="closeUpdatePopup()">Mégse</button>
+  
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      </div>
+    </div>
+  </div>
+  

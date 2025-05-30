@@ -16,6 +16,7 @@ const staffController = new StaffController();
 router.post('/loginStaff', staffController.loginStaff);
 router.get('/listAllStaff', staffController.listAllStaff);
 router.post('/createStaff', staffController.createStaff);
+router.get('/getStaff/:id', staffController.getStaffById);
 router.put('/modifyStaff/:id', staffController.modifyStaff);
 router.put('/deleteStaff/:id', staffController.deleteStaff);
 router.put('/activateStaff/:id', staffController.activateStaff);

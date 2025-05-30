@@ -43,7 +43,7 @@ export class StaffController {
 
   createStaff = async (req, res) => {
     try {
-      const { username, password, isActive } = req.body;
+      const { username, password } = req.body;
 
       if (!username || !password) {
         return res.status(400).json({ message: 'Felhasználónév és jelszó szükséges.' });
@@ -61,7 +61,7 @@ export class StaffController {
       const newStaff = this.staffRepository.create({
         username,
         password: hashedPassword,
-        isActive: isActive === undefined ? true : isActive,
+        isActive: true,
       });
 
       await this.staffRepository.save(newStaff);
@@ -75,46 +75,62 @@ export class StaffController {
     }
   }
 
+  getStaffById = async (req, res) => {
+    try {
+      const id = Number(req.params.id);
+      if (!id) {
+        return res.status(400).json({ message: 'Érvénytelen azonosító.' });
+      }
+  
+      const staff = await this.staffRepository.findOneBy({ id });
+      if (!staff) {
+        return res.status(404).json({ message: 'Felhasználó nem található.' });
+      }
+  
+      const { password: _omit, ...staffWithoutPassword } = staff;
+      return res.json(staffWithoutPassword);
+  
+    } catch (err) {
+      return this.handleError(res, err);
+    }
+  }
+
   modifyStaff = async (req, res) => {
     try {
       const id = Number(req.params.id);
       if (!id) {
         return res.status(400).json({ message: 'Érvénytelen azonosító.' });
       }
-
-      const { username, password, isActive } = req.body;
-
+  
       const staff = await this.staffRepository.findOneBy({ id });
       if (!staff) {
         return res.status(404).json({ message: 'Felhasználó nem található.' });
       }
-
-
-      if (username) {
- 
+  
+      const { username, password} = req.body;
+  
+      if (username !== undefined) {
         const userWithSameUsername = await this.staffRepository.findOneBy({ username });
         if (userWithSameUsername && userWithSameUsername.id !== id) {
           return res.status(409).json({ message: 'A felhasználónév már foglalt.' });
         }
         staff.username = username;
       }
-
-      if (typeof isActive === 'boolean') {
-        staff.isActive = isActive;
-      }
-
-      if (password) {
+  
+      if (password !== undefined) {
         staff.password = await bcrypt.hash(password, 10);
       }
-
+  
       await this.staffRepository.save(staff);
-
+  
       const { password: _omit, ...staffWithoutPassword } = staff;
-      return res.json(staffWithoutPassword);
+      res.json({ message: 'Dolgozó sikeresen frissítve!', staff: staffWithoutPassword });
+  
     } catch (err) {
-      return this.handleError(res, err);
+      this.handleError(res, err);
     }
   }
+  
 
   deleteStaff = async (req, res) => {
     try {

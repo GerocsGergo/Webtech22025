@@ -1,1 +1,20 @@
-<p>staff-login works!</p>
+<h2>Staff Login</h2>
+
+<form (ngSubmit)="loginStaff()">
+
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username" required />
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required />
+  </div>
+
+  <div>
+    <button type="button" (click)="goBack()">Back</button>
+    <button type="submit">Login</button>
+  </div>
+
+</form>

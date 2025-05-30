@@ -17,7 +17,6 @@ export class AdminStaffCreateComponent {
 
   username = '';
   password = '';
-  isActive = true;
 
   message = '';
   error = '';
@@ -28,11 +27,13 @@ export class AdminStaffCreateComponent {
       return;
     }
 
-    this.adminService.createStaff(this.username, this.password, this.isActive)
+    this.adminService.createStaff(this.username, this.password)
       .subscribe({
         next: (res) => {
           this.message = 'Dolgozó sikeresen létrehozva.';
           this.error = '';
+          this.username = '';
+          this.password = '';
 
         },
         error: (err) => {

@@ -12,12 +12,17 @@ export class AdminService {
 
 
   //Staff methods for admin menu
-  createStaff(username: string, password: string, isActive: boolean = true) {
-    return this.http.post<StaffResponseDTO>('/api/createStaff', { username, password, isActive });
+  createStaff(username: string, password: string) {
+    return this.http.post<StaffResponseDTO>('/api/createStaff', { username, password});
   }
 
-  modifyStaff(id: number, username?: string, password?: string, isActive?: boolean) {
-    return this.http.put<StaffResponseDTO>(`/api/modifyStaff/` + id, { username, password, isActive });
+  getStaffById(id: number) {
+    return this.http.get<StaffResponseDTO>(`/api/getStaff/${id}`);
+  }
+  
+
+  modifyStaff(id: number, username?: string, password?: string) {
+    return this.http.put<StaffResponseDTO>(`/api/modifyStaff/` + id, { username, password});
   }
 
   deleteStaff(id: number) {

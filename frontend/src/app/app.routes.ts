@@ -11,7 +11,6 @@ import { AdminDeleteComponent } from './components/admin-delete/admin-delete.com
 import { AdminStaffListComponent } from './components/admin-staff-list/admin-staff-list.component';
 import { AdminStaffCreateComponent } from './components/admin-staff-create/admin-staff-create.component';
 import { AdminStaffModifyComponent } from './components/admin-staff-modify/admin-staff-modify.component';
-import { AdminStaffDeleteComponent } from './components/admin-staff-delete/admin-staff-delete.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -40,8 +39,6 @@ export const routes: Routes = [
     { path: 'admin-staff-create', component: AdminStaffCreateComponent},
 
     { path: 'admin-staff-modify', component: AdminStaffModifyComponent},
-
-    { path: 'admin-staff-delete', component: AdminStaffDeleteComponent},
 
     { path: 'admin-main-menu', component: AdminMainMenuComponent}
 

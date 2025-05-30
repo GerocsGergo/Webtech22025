@@ -18,7 +18,7 @@ export class StaffLoginComponent {
     password = '';
     code = '';
   
-    loginAdmin() {
+    loginStaff() {
       this.loginService.loginStaff(this.username, this.password).subscribe({
         next: (adminInfo: StaffResponseDTO) => {
           console.log('Login successful:', adminInfo);

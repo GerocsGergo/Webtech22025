@@ -55,10 +55,6 @@ export class AdminMainMenuComponent implements OnInit{
     this.router.navigate(['admin-staff-modify']);
   }
 
-  adminStaffDelete() {
-    this.router.navigate(['admin-staff-delete']);
-  }
-
   //Egyéb
 
   goBack() {
