@@ -42,13 +42,15 @@
         </tbody>
       </table>
   
-      <button (click)="goBack()">Vissza</button>
+
       <button (click)="inactivateStaff()">Inaktiválás</button>
       <button (click)="activateStaff()">Aktiválás</button>
   
       <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
     </div>
-  
+
+    <button (click)="goBack()">Vissza</button>
+
     <div *ngIf="showUpdatePopup" class="popup-overlay">
       <div class="popup">
         <h3>{{ getFormattedField(fieldToUpdate) }} módosítása</h3>

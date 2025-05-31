@@ -1,1 +1,59 @@
-<p>game-delete works!</p>
+<div class="page">
+    <h1>Videojáték adatlap</h1>
+  
+    <div *ngIf="!game">
+      <label>Videojáték azonosító:</label>
+      <input type="number" [(ngModel)]="id" />
+      <button (click)="loadGame()">Keresés</button>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </div>
+  
+    <div *ngIf="game">
+      <table>
+        <thead>
+          <tr>
+            <th>Adattípus</th>
+            <th>Érték</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sorszám</td>
+            <td>{{ game.sorszam }}</td>
+          </tr>
+          <tr>
+            <td>Cím</td>
+            <td>{{ game.cim }}</td>
+          </tr>
+          <tr>
+            <td>Kategória</td>
+            <td>{{ game.kategoria }}</td>
+          </tr>
+          <tr>
+            <td>Platform</td>
+            <td>{{ game.platform }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <button (click)="confirmDelete()">Törlés</button>
+     
+  
+      <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    </div>
+    
+    <button (click)="goBack()">Vissza</button>
+
+    <div *ngIf="showDeletePopup" class="popup-overlay">
+      <div class="popup">
+        <h3>Biztosan törlöd ezt a játékot?</h3>
+        <p><strong>{{ game.cim }}</strong> (ID: {{ game.sorszam }})</p>
+  
+        <button (click)="deleteGame()">Igen, törlés</button>
+        <button (click)="closeDeletePopup()">Mégse</button>
+  
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      </div>
+    </div>
+  </div>
+  

@@ -89,15 +89,57 @@ export class GameController {
     }
   };
   
+
+  getGameById = async (req, res) => {
+    try {
+      const { id} = req.params;
+  
+      if (id !== null && !isNaN(id)) {
+        const game = await this.gameRepository.findOneBy({ sorszam: Number(id) });
+        if (!game) return res.status(404).json({ message: 'Játék nem található ezzel az ID-vel.' });
+        return res.json(game);
+      }
+  
+      return res.status(400).json({ message: 'Adj meg legalább egy keresési paramétert: id, cim, kategoria vagy platform.' });
+  
+    } catch (err) {
+      return this.handleError(res, err);
+    }
+  };
+  
   
 
   modifyGame = async (req, res) => {
     try {
-    
+      const id = Number(req.params.id);
+      if (isNaN(id)) {
+        return res.status(400).json({ message: 'Érvénytelen ID!' });
+      }
+  
+      const game = await this.gameRepository.findOneBy({ sorszam: id });
+      if (!game) {
+        return res.status(404).json({ message: 'Játék nem található.' });
+      }
+  
+      const { cim, kategoria, platform } = req.body;
+  
+      if (cim !== undefined) game.cim = cim;
+      if (kategoria !== undefined && !Object.values(JatekKategoria).includes(kategoria)) {
+        return res.status(400).json({ message: `Érvénytelen kategória. Lehetséges értékek: ${Object.values(JatekKategoria).join(', ')}` });
+      }
+      if (platform !== undefined && !Object.values(Platform).includes(platform)) {
+        return res.status(400).json({ message: `Érvénytelen platform. Lehetséges értékek: ${Object.values(Platform).join(', ')}` });
+      }
+      
+  
+      await this.gameRepository.save(game);
+  
+      return res.json({ message: 'Játék módosítva.', game });
     } catch (err) {
       this.handleError(res, err);
     }
-  }
+  };
+  
   
 
   deleteGame = async (req, res) => {

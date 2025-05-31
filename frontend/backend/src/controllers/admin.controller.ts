@@ -132,7 +132,11 @@ export class AdminController {
           if (newCode) {
             admin.code = await bcrypt.hash(newCode, 10);
           }
-      
+          
+          if (!newCode && ! newPassword){
+            return res.json({ message: 'Kérjük adjon meg új jelszót vagy kódot!' });
+          }
+
           await this.adminRepository.save(admin);
       
           return res.json({ message: 'Admin frissítve.' });

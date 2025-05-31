@@ -17,6 +17,7 @@ const gameController = new GameController();
 router.get('/getAllGames', gameController.getAllGame);
 router.post('/createGame', gameController.createGame);
 router.get('/getGame', gameController.getGame);
+router.get('/getGameById/:id', gameController.getGameById);
 router.put('/modifyGame/:id', gameController.modifyGame);
 router.delete('/deleteGame/:id', gameController.deleteGame);
 

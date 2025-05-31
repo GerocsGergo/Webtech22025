@@ -33,12 +33,18 @@ export class StaffService {
     return this.http.get<GameDTO | GameDTO[]>('/api/getGame', { params });
   }
   
+  getGameById(id: number){
+    return this.http.get<GameDTO>('/api/getGameById/' + id);
+  }
+
   createGame(game: Omit<GameDTO, 'sorszam' | 'beszerzes_datuma'>) {
     return this.http.post<GameDTO>('/api/createGame', game);
   }
 
-  modifyGame(id: number) {
+  modifyGame(id: number, data: any) {
+    return this.http.put('/api/modifyGame/' + id, data);
   }
+  
 
   deleteGame(id: number) {
     return this.http.delete<{ message: string }>(`/api/deleteGame/` + id);

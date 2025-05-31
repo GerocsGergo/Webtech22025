@@ -20,5 +20,8 @@
 - Can add, list and search games
 - Changed versions
 
+## [v0.4.0] - 2025-05-31 
+### WIP Version
+- Can delete and modify games
 
 
