@@ -1,0 +1,50 @@
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e6f2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container h1 {
+    text-align: center;
+    color: #2e7d32;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .container input[type="text"],
+  .container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .menu-button {
+    padding: 10px 15px;
+    margin: 10px 10px 0 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #388e3c;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-button:hover {
+    background-color: #2e7d32;
+  }
+  

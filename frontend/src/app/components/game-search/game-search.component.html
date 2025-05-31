@@ -1,50 +1,54 @@
-<h2>Játék keresés</h2>
+<div class="container-search">
 
-<div>
-  <label>ID: <input type="number" [(ngModel)]="id"></label>
-</div>
-<div>
-  <label>Cím: <input type="text" [(ngModel)]="cim"></label>
-</div>
-<div>
-  <label>Kategória:
-    <select [(ngModel)]="kategoria">
-      <option [ngValue]="undefined">-- Válassz --</option>
-      <option *ngFor="let kat of kategoriaLista" [value]="kat">{{ kat }}</option>
-    </select>
-  </label>
-</div>
-<div>
-  <label>Platform:
-    <select [(ngModel)]="platform">
-      <option [ngValue]="undefined">-- Válassz --</option>
-      <option *ngFor="let plat of platformLista" [value]="plat">{{ plat }}</option>
-    </select>
-  </label>
-</div>
+  <h2>Játék keresés</h2>
 
-<button (click)="searchGames()">Keresés</button>
-<button (click)="goBack()">Vissza</button>
+  <div>
+    <label>ID: <input type="number" [(ngModel)]="id"></label>
+  </div>
+  <div>
+    <label>Cím: <input type="text" [(ngModel)]="cim"></label>
+  </div>
+  <div>
+    <label>Kategória:
+      <select [(ngModel)]="kategoria">
+        <option [ngValue]="undefined">-- Válassz --</option>
+        <option *ngFor="let kat of kategoriaLista" [value]="kat">{{ kat }}</option>
+      </select>
+    </label>
+  </div>
+  <div>
+    <label>Platform:
+      <select [(ngModel)]="platform">
+        <option [ngValue]="undefined">-- Válassz --</option>
+        <option *ngFor="let plat of platformLista" [value]="plat">{{ plat }}</option>
+      </select>
+    </label>
+  </div>
 
-<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+  <button (click)="searchGames()">Keresés</button>
+  <button (click)="goBack()">Vissza</button>
 
-<table *ngIf="games.length">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Cím</th>
-      <th>Beszerzés dátuma</th>
-      <th>Kategória</th>
-      <th>Platform</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let game of games">
-      <td>{{ game.sorszam }}</td>
-      <td>{{ game.cim }}</td>
-      <td>{{ game.beszerzes_datuma | date:'yyyy-MM-dd' }}</td>
-      <td>{{ game.kategoria }}</td>
-      <td>{{ game.platform }}</td>
-    </tr>
-  </tbody>
-</table>
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+  <table *ngIf="games.length">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cím</th>
+        <th>Beszerzés dátuma</th>
+        <th>Kategória</th>
+        <th>Platform</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games">
+        <td>{{ game.sorszam }}</td>
+        <td>{{ game.cim }}</td>
+        <td>{{ game.beszerzes_datuma | date:'yyyy-MM-dd' }}</td>
+        <td>{{ game.kategoria }}</td>
+        <td>{{ game.platform }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

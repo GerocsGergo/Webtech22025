@@ -1,25 +1,24 @@
-<div>
-    <h1>Új játék felvitel</h1>
-  
-    <div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div>
-    <div *ngIf="successMessage" style="color: green;">{{ successMessage }}</div>
-  
-    <label>Cím:</label>
-    <input type="text" [(ngModel)]="newGame.cim" />
-  
-    <label>Kategória:</label>
-    <select [(ngModel)]="newGame.kategoria">
-      <option *ngFor="let kat of kategoriaLista" [value]="kat">{{ kat }}</option>
-    </select>
-  
-    <label>Platform:</label>
-    <select [(ngModel)]="newGame.platform">
-      <option *ngFor="let plat of platformLista" [value]="plat">{{ plat }}</option>
-    </select>
-  
-    <br /><br />
-  
-    <button (click)="createGame()">Mentés</button>
-    <button (click)="goBack()">Vissza</button>
-  </div>
-  
+<div class="container">
+  <h1>Új játék felvitel</h1>
+
+  <div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" style="color: green;">{{ successMessage }}</div>
+
+  <label>Cím:</label>
+  <input type="text" [(ngModel)]="newGame.cim" />
+
+  <label>Kategória:</label>
+  <select [(ngModel)]="newGame.kategoria">
+    <option *ngFor="let kat of kategoriaLista" [value]="kat">{{ kat }}</option>
+  </select>
+
+  <label>Platform:</label>
+  <select [(ngModel)]="newGame.platform">
+    <option *ngFor="let plat of platformLista" [value]="plat">{{ plat }}</option>
+  </select>
+
+  <br /><br />
+
+  <button (click)="createGame()" class="menu-button">Mentés</button>
+  <button (click)="goBack()" class="menu-button">Vissza</button>
+</div>

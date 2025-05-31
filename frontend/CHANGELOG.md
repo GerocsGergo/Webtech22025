@@ -24,4 +24,7 @@
 ### WIP Version
 - Can delete and modify games
 
+## [v0.5.0] - 2025-05-31 
+### WIP Version
+- Added styles to staff menu
 
