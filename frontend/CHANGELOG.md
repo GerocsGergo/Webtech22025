@@ -44,3 +44,7 @@
 ## [v1.3.0] - 2025-06-02 
 ### Release Version
 - Added background picture
+
+## [v1.4.0] - 2025-06-02 
+### Release Version
+- Added demo images

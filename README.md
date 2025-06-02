@@ -10,45 +10,45 @@ Gerőcs Gergő FEU2E5
 ### Staff Menus
 
 ### Main Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Staff Menu](Demo_images/staffmenu.png)
 
 ### Create Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Game create Menu](Demo_images/gamecreate.png)
 
 ### Modify Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Game modify Menu](Demo_images/gamemodify.png)
 
 ### List Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Game list Menu](Demo_images/gamelist.png)
 
 ### Delete Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Game delete Menu](Demo_images/gamedelete.png)
 
 ### Admin-Staff Menus
 
 ### Main Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Admin Menu](Demo_images/adminmenu.png)
 
 ### Create Staff Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Staff create Menu](Demo_images/staffcreate.png)
 
 ### Modify Staff Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Staff modify Menu](Demo_images/staffmodify.png)
 
 ### List Staff Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Staff list Menu](Demo_images/stafflist.png)
 
 ### Admin-Admin Menus
 
 ### Create Admin Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Admin create Menu](Demo_images/admincreate.png)
 
 ### Modify Admin Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Admin modify Menu](Demo_images/adminmodify.png)
 
 ### List Admin Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Admin list Menu](Demo_images/adminlist.png)
 
 ### Delete Admin Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Admin delete Menu](Demo_images/admindelete.png)
 
