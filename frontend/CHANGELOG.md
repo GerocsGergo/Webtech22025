@@ -52,3 +52,7 @@
 ## [v1.4.1] - 2025-06-02 
 ### Release Version
 - Welcome.png fixed
+
+## [v1.4.2] - 2025-06-02 
+### Release Version
+- ReadME updated

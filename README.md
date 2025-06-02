@@ -1,6 +1,16 @@
-# Webtech22025
-Webtechnológiák beadandó 2025
+# Webtechnológiák 2 beadandó 2025 
+
+Készítette:
 Gerőcs Gergő FEU2E5
+
+### Feladat:
+
+Videójáték nyilvántartó rendszer készítése, bejelentkezéssel.
+-TypeORM, Angular, Wampserver, Node.js, MySQL, Express használatával.
+A futtatáshoz szükséges, különböző fájlok és adatok egy nem feltöltött .env fájlban vannak tárolva, amit kérésre elküldök.
+
+Backend szerver indítása, backend mappában: "npm start"
+Frontend indítása, frontend mappában: "npm start"
 
 ## 📸 Demo
 
