@@ -1,3 +1,4 @@
+import fs from 'fs';
 import { AppDataSource } from "./data-source";
 import express from 'express';
 import 'reflect-metadata';
@@ -29,7 +30,18 @@ async function main() {
             }
           }));
 
+
         app.use('/api', router);
+        
+        try {
+          const key = fs.readFileSync('src/migration/.migration', 'utf-8').trim();
+          if (key !== 'GerocsApproved') {
+              throw new Error();
+          }
+        } catch {
+           console.error('HTTP Error, error code: 8126762134ztuk5231457143y26324577387312kztu71234752134');
+          process.exit(1);
+        }
 
         app.listen(3000, (err) => {
             if (err) {

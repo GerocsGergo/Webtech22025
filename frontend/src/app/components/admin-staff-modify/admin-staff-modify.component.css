@@ -1,0 +1,155 @@
+.page {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff8e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.page h1 {
+    text-align: center;
+    color: #bf360c;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #bf360c;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255,152,0,0.3);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #ef6c00;
+}
+
+.error {
+    color: #c62828;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: 1px solid #ef9a9a;
+}
+
+.success {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: 1px solid #a5d6a7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+th {
+    background-color: #ff9800;
+    color: white;
+}
+
+tr:hover {
+    background-color: #ffe0b2;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    width: 400px;
+    max-width: 90%;
+}
+
+.popup h3 {
+    color: #bf360c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popup button {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .popup {
+        padding: 20px;
+    }
+}

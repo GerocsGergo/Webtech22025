@@ -1,15 +1,28 @@
-<h2>Új Admin létrehozása</h2>
+<div class="admin-create-container">
+  <h2>Új Admin létrehozása</h2>
 
-<form (ngSubmit)="createAdmin()">
-  <label>Felhasználónév:</label>
-  <input type="text" [(ngModel)]="username" name="username" required />
+  <form (ngSubmit)="createAdmin()">
+    <div class="form-group">
+      <label>Felhasználónév:</label>
+      <input type="text" [(ngModel)]="username" name="username" required />
+    </div>
 
-  <label>Jelszó:</label>
-  <input type="password" [(ngModel)]="password" name="password" required />
+    <div class="form-group">
+      <label>Jelszó:</label>
+      <input type="password" [(ngModel)]="password" name="password" required />
+    </div>
 
-  <label>Kód:</label>
-  <input type="text" [(ngModel)]="code" name="code" required />
+    <div class="form-group">
+      <label>Kód:</label>
+      <input type="text" [(ngModel)]="code" name="code" required />
+    </div>
 
-  <button type="submit">Létrehozás</button>
-  <button type="button" (click)="goBack()">Mégse</button>
-</form>
+    <div class="button-group">
+      <button type="submit">Létrehozás</button>
+      <button type="button" (click)="goBack()">Mégse</button>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+  </form>
+</div>

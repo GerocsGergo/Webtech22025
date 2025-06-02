@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-admin-modify',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './admin-modify.component.html',
   styleUrl: './admin-modify.component.css'
 })
@@ -17,6 +18,9 @@ export class AdminModifyComponent {
   newPassword: string = '';
   newCode: string = '';
 
+  errorMessage = '';
+  successMessage = '';
+
   modifyAdmin() {
     if (!this.id) {
       alert('Adj meg egy admin ID-t!');
@@ -25,12 +29,13 @@ export class AdminModifyComponent {
 
     this.adminService.modifyAdmin(this.id, this.newPassword, this.newCode).subscribe({
       next: () => {
-        alert('Admin sikeresen módosítva.');
-        this.router.navigate(['admin-main-menu']);
+        this.errorMessage = '';
+        this.successMessage = 'Admin sikeresen módosítva.';
       },
       error: err => {
         console.error('Hiba történt:', err);
-        alert(err.error.message || 'Hiba történt a módosítás során.');
+        this.successMessage = '';
+        this.errorMessage = err.error.message || 'Hiba történt a módosítás során.';
       }
     });
   }

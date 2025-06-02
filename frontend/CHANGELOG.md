@@ -28,3 +28,7 @@
 ### WIP Version
 - Added styles to staff menu
 
+## [v1.0.0] - 2025-06-02 
+### Release Version
+- Added styles admin menu
+- Fixed error and success messages in admin menus

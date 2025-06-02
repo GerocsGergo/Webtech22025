@@ -1,0 +1,110 @@
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff8e1; /* világos sárga */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #bf360c; /* sötét barna */
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  thead tr {
+    background-color: #ff9800; /* narancsos sárga */
+    color: white;
+    text-align: left;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  
+  tbody tr:hover {
+    background-color: #ffe0b2; /* világos narancsos-sárga */
+  }
+  
+  button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #ff9800; /* narancsos sárga */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ef6c00; /* sötétebb narancs */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    tbody tr {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: white;
+    }
+  
+    tbody td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+    }
+  
+    tbody td::before {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      width: 45%;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #bf360c; /* sötét barna */
+    }
+  
+    tbody td:nth-of-type(1)::before { content: "Sorszám"; }
+    tbody td:nth-of-type(2)::before { content: "Cím"; }
+    tbody td:nth-of-type(3)::before { content: "Hozzáadás dátuma"; }
+    tbody td:nth-of-type(4)::before { content: "Kategória"; }
+    tbody td:nth-of-type(5)::before { content: "Platform"; }
+  }
+  

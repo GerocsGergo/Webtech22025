@@ -1,25 +1,29 @@
-<h2>Admin Login</h2>
+<body class="admin-theme">
 
-<form (ngSubmit)="loginAdmin()">
+  <div class="title-container">
+    <h2>Adminisztrátori Belépés</h2>
 
-  <div>
-    <label for="username">Username:</label>
-    <input id="username" type="text" [(ngModel)]="username" name="username" required />
+    <form (ngSubmit)="loginAdmin()">
+      <div>
+        <label for="username">Felhasználónév:</label>
+        <input id="username" type="text" [(ngModel)]="username" name="username" required />
+      </div>
+
+      <div>
+        <label for="password">Jelszó:</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <div>
+        <label for="code">Kód:</label>
+        <input id="code" type="text" [(ngModel)]="code" name="code" required />
+      </div>
+
+      <div>
+        <button type="button" (click)="goBack()">Vissza</button>
+        <button type="submit">Bejelentkezés</button>
+      </div>
+    </form>
   </div>
 
-  <div>
-    <label for="password">Password:</label>
-    <input id="password" type="password" [(ngModel)]="password" name="password" required />
-  </div>
-
-  <div>
-    <label for="code">Code:</label>
-    <input id="code" type="text" [(ngModel)]="code" name="code" required />
-  </div>
-
-  <div>
-    <button type="button" (click)="goBack()">Back</button>
-    <button type="submit">Login</button>
-  </div>
-
-</form>
+</body>

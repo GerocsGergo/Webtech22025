@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-admin-delete',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './admin-delete.component.html',
   styleUrl: './admin-delete.component.css'
 })
@@ -15,6 +16,9 @@ export class AdminDeleteComponent {
 
   adminId: number | null = null;
 
+  errorMessage = '';
+  successMessage = '';
+
   deleteAdmin() {
     if (this.adminId === null) {
       alert('Add meg az admin ID-t!');
@@ -23,12 +27,16 @@ export class AdminDeleteComponent {
 
     this.adminService.deleteAdmin(this.adminId).subscribe({
       next: () => {
-        alert(`Admin (ID: ${this.adminId}) sikeresen deaktiválva.`);
+        //alert(`Admin (ID: ${this.adminId}) sikeresen deaktiválva.`);
+        this.errorMessage = '';
+        this.successMessage = `Admin sikeresen deaktiválva.`;
         this.adminId = null;
       },
       error: (err) => {
         console.error('Hiba:', err);
-        alert(err.error.message);
+        //alert(err.error.message);
+        this.successMessage = '';
+        this.errorMessage = err.error.message;
       }
     });
   }
@@ -41,12 +49,15 @@ export class AdminDeleteComponent {
 
     this.adminService.activateAdmin(this.adminId).subscribe({
       next: () => {
-        alert(`Admin (ID: ${this.adminId}) sikeresen aktiválva.`);
+        //alert(`Admin (ID: ${this.adminId}) sikeresen aktiválva.`);
+        this.errorMessage = '';
+        this.successMessage =`Admin sikeresen aktiválva.`;
         this.adminId = null;
       },
       error: (err) => {
         console.error('Hiba:', err);
-        alert(err.error.message);
+        this.successMessage = '';
+        this.errorMessage = err.error.message;
       }
     });
   }

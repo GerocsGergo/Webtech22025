@@ -1,16 +1,26 @@
-<div>
-    <h2>Admin módosítása</h2>
-  
+<div class="admin-update-container">
+  <h2>Admin módosítása</h2>
+
+  <div class="form-group">
     <label for="id">Admin ID:</label>
     <input type="number" id="id" [(ngModel)]="id" />
-  
+  </div>
+
+  <div class="form-group">
     <label for="password">Új jelszó:</label>
     <input type="password" id="password" [(ngModel)]="newPassword" />
-  
+  </div>
+
+  <div class="form-group">
     <label for="code">Új kód:</label>
     <input type="text" id="code" [(ngModel)]="newCode" />
-  
+  </div>
+
+  <div class="button-group">
     <button (click)="modifyAdmin()">Módosítás</button>
     <button (click)="goBack()">Vissza</button>
   </div>
-  
+
+  <div *ngIf="errorMessage" class="message error-message">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" class="message success-message">{{ successMessage }}</div>
+</div>
