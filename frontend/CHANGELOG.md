@@ -48,3 +48,7 @@
 ## [v1.4.0] - 2025-06-02 
 ### Release Version
 - Added demo images
+
+## [v1.4.1] - 2025-06-02 
+### Release Version
+- Welcome.png fixed

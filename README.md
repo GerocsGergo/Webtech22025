@@ -5,7 +5,7 @@ Gerőcs Gergő FEU2E5
 ## 📸 Demo
 
 ### Welcome Menu
-![Welcome Menu](Demo_images/Welcome.png)
+![Welcome Menu](Demo_images/welcome.png)
 
 ### Staff Menus
 
