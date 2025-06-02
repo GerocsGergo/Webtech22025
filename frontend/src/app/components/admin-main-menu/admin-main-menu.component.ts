@@ -29,6 +29,10 @@ export class AdminMainMenuComponent implements OnInit{
 
   //Admin
 
+  listAdmin() {
+    this.router.navigate(['admin-list']);
+  }
+
   createAdmin() {
     this.router.navigate(['admin-create']);
   }

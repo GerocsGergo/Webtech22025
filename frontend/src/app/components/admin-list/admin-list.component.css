@@ -1,0 +1,145 @@
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff8e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #bf360c;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  .error-message {
+    color: #c62828;
+    background-color: #ffebee;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ef9a9a;
+    text-align: center;
+  }
+  
+  .success-message {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #a5d6a7;
+    text-align: center;
+  }
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .admin-table thead tr {
+    background-color: #ff9800;
+    color: white;
+    text-align: left;
+  }
+  
+  .admin-table th, 
+  .admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  
+  .admin-table tbody tr:hover {
+    background-color: #ffe0b2;
+  }
+  
+  .no-admins {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 20px 0;
+  }
+  
+  button {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    padding: 12px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ef6c00;
+  }
+  
+  /* Reszponzív stílusok */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    .admin-table, 
+    .admin-table thead, 
+    .admin-table tbody, 
+    .admin-table th, 
+    .admin-table td, 
+    .admin-table tr {
+      display: block;
+    }
+  
+    .admin-table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .admin-table tbody tr {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: white;
+    }
+  
+    .admin-table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+    }
+  
+    .admin-table td::before {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      width: 45%;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #bf360c;
+    }
+  
+    .admin-table td:nth-of-type(1)::before { content: "ID"; }
+    .admin-table td:nth-of-type(2)::before { content: "Felhasználónév"; }
+    .admin-table td:nth-of-type(3)::before { content: "Státusz"; }
+  
+    button {
+      width: 100%;
+    }
+  }

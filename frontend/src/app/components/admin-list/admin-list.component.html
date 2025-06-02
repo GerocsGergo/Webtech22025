@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Adminisztrátorok listája</h2>
+  
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+    <div *ngIf="message" class="success-message">{{ message }}</div>
+  
+    <table *ngIf="adminList.length > 0; else noAdmins" class="admin-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Felhasználónév</th>
+          <th>Státusz</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let admin of adminList">
+          <td>{{ admin.id }}</td>
+          <td>{{ admin.username }}</td>
+          <td>{{ admin.isActive ? 'Aktív' : 'Inaktív' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noAdmins>
+      <p class="no-admins">Nincs adminisztrátor rögzítve.</p>
+    </ng-template>
+  
+    <button (click)="goBack()">Vissza a főmenübe</button>
+  </div>

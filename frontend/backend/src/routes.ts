@@ -36,6 +36,7 @@ router.put('/activateStaff/:id', staffController.activateStaff);
 const adminController = new AdminController();
 router.post('/loginAdmin', adminController.loginAdmin);
 router.get('/getCurrentAdmin', adminController.getCurrentAdmin);
+router.get('/listAllAdmin', adminController.listAllAdmin);
 router.post('/createAdmin', adminController.createAdmin);
 router.put('/modifyAdmin/:id', adminController.modifyAdmin);
 router.put('/deleteAdmin/:id', adminController.deleteAdmin);

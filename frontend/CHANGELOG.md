@@ -32,3 +32,7 @@
 ### Release Version
 - Added styles admin menu
 - Fixed error and success messages in admin menus
+
+## [v1.1.0] - 2025-06-02 
+### Release Version
+- Added admin list and style to it

@@ -14,6 +14,7 @@
 
       <div class="menu-column" *ngIf="isSuperAdmin">
         <h3>Adminisztrátorok</h3>
+        <button class="menu-button" (click)="listAdmin()">Listázás</button>
         <button class="menu-button" (click)="createAdmin()">Létrehozás</button>
         <button class="menu-button" (click)="modifyAdmin()">Módosítás</button>
         <button class="menu-button" (click)="deleteAdmin()">Törlés</button> 

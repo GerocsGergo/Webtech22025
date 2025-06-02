@@ -71,6 +71,20 @@ export class AdminController {
       });
     }
     
+    
+    listAllAdmin = async (req, res) => {
+      try {
+        const allAdmin = await this.adminRepository.find();
+        
+        const safeAdminList = allAdmin
+          .filter(admin => admin.username !== 'superadmin') 
+          .map(({ password, code, ...rest }) => rest); 
+  
+        return res.json(safeAdminList);
+      } catch (err) {
+        return this.handleError(res, err);
+      }
+  };
 
     createAdmin = async (req, res) => {
         try {

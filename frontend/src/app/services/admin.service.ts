@@ -21,6 +21,7 @@ export class AdminService {
   }
   
 
+
   modifyStaff(id: number, username?: string, password?: string) {
     return this.http.put<StaffResponseDTO>(`/api/modifyStaff/` + id, { username, password});
   }
@@ -39,6 +40,10 @@ export class AdminService {
 
 
   //ADMIN
+
+  listAllAdmin() {
+    return this.http.get<AdminResponseDTO[]>('/api/listAllAdmin');
+  }
 
   createAdmin(username: string, password: string, code: string) {
     return this.http.post<AdminResponseDTO>('/api/createAdmin', { username, password, code });

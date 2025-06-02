@@ -16,6 +16,7 @@ import { GameSearchComponent } from './components/game-search/game-search.compon
 import { GameCreateComponent } from './components/game-create/game-create.component';
 import { GameModifyComponent } from './components/game-modify/game-modify.component';
 import { GameDeleteComponent } from './components/game-delete/game-delete.component';
+import { AdminListComponent } from './components/admin-list/admin-list.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -48,6 +49,8 @@ export const routes: Routes = [
     { path: 'admin-modify', component: AdminModifyComponent},
 
     { path: 'admin-delete', component: AdminDeleteComponent},
+
+    { path: 'admin-list', component: AdminListComponent},
 
     { path: 'admin-staff-list', component: AdminStaffListComponent},
 
