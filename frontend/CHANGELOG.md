@@ -36,3 +36,7 @@
 ## [v1.1.0] - 2025-06-02 
 ### Release Version
 - Added admin list and style to it
+
+## [v1.2.0] - 2025-06-02 
+### Release Version
+- Modified readMe, to accompany pics of the demo (Pics not added yet!)
