@@ -40,3 +40,7 @@
 ## [v1.2.0] - 2025-06-02 
 ### Release Version
 - Modified readMe, to accompany pics of the demo (Pics not added yet!)
+
+## [v1.3.0] - 2025-06-02 
+### Release Version
+- Added background picture

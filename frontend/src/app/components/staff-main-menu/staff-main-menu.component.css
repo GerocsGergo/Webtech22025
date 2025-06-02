@@ -5,7 +5,7 @@
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .title-container {
     text-align: center;
     margin-bottom: 30px;
@@ -37,11 +37,29 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
+
+  .menu-button2 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 50px;
+  }
   
   .menu-button:hover {
     background-color: #2e7d32;
   }
   
+  .menu-button2:hover {
+    background-color: #2e7d32;
+  }
   
 
   .main-menu-island {
