@@ -11,7 +11,7 @@ export class Admin implements AdminDTO{
     username: string;
 
     @Column()
-    password: string; //this will be a hashed
+    password: string;
 
     @Column()
     code: string;

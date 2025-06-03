@@ -11,7 +11,7 @@ export class Staff implements StaffDTO{
     username: string;
 
     @Column()
-    password: string; //this will be a hashed string
+    password: string;
 
     @Column()
     isActive: boolean;

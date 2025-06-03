@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
-import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { StaffLoginComponent } from './components/staff-login/staff-login.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { AdminCreateComponent } from './components/admin-create/admin-create.component';
@@ -20,9 +19,6 @@ import { AdminListComponent } from './components/admin-list/admin-list.component
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
-
-    { path: 'main-menu', component: MainMenuComponent },
-
 
     //Staff menu
 

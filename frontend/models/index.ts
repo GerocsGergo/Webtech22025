@@ -32,49 +32,8 @@ export interface AdminDTO {
   isActive: boolean;
 }
 
-// Frontendnek küldött DTO
 export interface AdminResponseDTO {
   id: number;
   username: string;
   isActive: boolean;
 }
-
-
-
-/* export interface CustomerDTO {
-    azonosito: number;
-    nev: string;
-    telefonszam: string;
-    lakcim: string;
-    statusz: string;
-}
-
-
-
-export interface BorrowingDTO {
-    id: number;
-    game: {
-      sorszam: number;
-      cim: string;
-      beszerzes_datuma: Date;
-      tipus: string;
-      statusz: string;
-      platform: string;
-      };
-      customer: {
-        azonosito: number;
-        nev: string;
-        telefonszam: string;
-        lakcim: string;
-        statusz: string;
-      };
-    kolcsonzes_datuma: Date;
-    visszahozas_datuma: Date | null;
-  }
-
-  export interface BorrowingLateDTO {
-    id: number;
-    daysLate: number;
-  } */
-
-  
