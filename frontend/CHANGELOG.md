@@ -64,3 +64,7 @@
 ## [v1.4.4] - 2025-06-03
 ### Release Version
 - Changelog fixed
+
+## [v1.4.5] - 2025-06-03
+### Release Version
+- unused mainMenu component removed
