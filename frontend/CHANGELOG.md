@@ -56,3 +56,11 @@
 ## [v1.4.2] - 2025-06-02 
 ### Release Version
 - ReadME updated
+
+## [v1.4.3] - 2025-06-03
+### Release Version
+- Welcome menu fixed
+
+## [v1.4.4] - 2025-06-03
+### Release Version
+- Changelog fixed
